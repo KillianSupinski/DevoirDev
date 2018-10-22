@@ -18,9 +18,7 @@
     <input type="text" value="Numero de la conference"> 
     <?php
     foreach ($lesIdConf as $unIdConf) {
-        ?>
-        <input type="text" name="txtIdConf" value="<?php  $unIdConf->$idConf; ?>"> 
-    <?php
+        echo  "<input type='text' name='txtIdConf' value='".$unIdConf->$idConference."'>";
     }
     ?>  
     <input type="text" value="Titre de la conference"> 
