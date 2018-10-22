@@ -9,8 +9,9 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <?php
-    echo 'hey';
-    ?>
+    <h1>Devoir TechDays</h1>
+    <input type="button" value="Créer une conférence" onclick><br><br>
+    <input type="button" value="Voter pour une conférence">
+    
 </body>
 </html>
