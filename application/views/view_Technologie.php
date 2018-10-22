@@ -14,12 +14,12 @@
     <link href="<?php echo base_url(); ?>Bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
 </head>
 <body>
-    <form method="POST" action="<?php echo base_url(); ?>index.php/ctrl_home">
+    <form method="POST" action="<?php echo base_url(); ?>index.php/ctrl_home/insererConference">
     <input type="text" value="Numero de la conference"> 
     <?php
     foreach ($lesIdConf as $unIdConf) {
         ?>
-        <input type="text" value="<?php echo $unIdConf->$idConfe; ?>"> 
+        <input type="text" name="txtIdConf" value="<?php  $unIdConf->$idConf; ?>"> 
     <?php
     }
     ?>  
@@ -30,7 +30,7 @@
     <input type="text" value="Contenue de la conference"> 
     <input type="text" name="txtContenue"> 
     <input type="text" value="Choix du niveau"> 
-    <select>
+    <select name="idNiveau">
     <?php
     foreach ($lesNomsNiveau as $unNomNiveau) {
         ?>
@@ -41,7 +41,7 @@
     </select><br>
 
     <input type="text" value="Choix du thème"> 
-    <select>
+    <select name="idTheme">
     <?php
     foreach ($lesNomsTheme as $unNomTheme) {
         ?>

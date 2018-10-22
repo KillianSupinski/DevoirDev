@@ -23,11 +23,18 @@ class ctrl_home extends CI_Controller
         $titre = $this->input->post('txtTitre');
         $contenue = $this->input->post('txtContenue');
         $idTech = $this->input->post('idTech');
+        $idTheme = $this->input->post('idTheme');
+        $idNiveau = $this->input->post('idNiveau');
+        $idConfe = $this->input->post('txtIdConf');
         $tab = array(
+            'IDCONFERENCE' => $idConfe,
             'TITRE' => $titre,
             'CONTENU' => $contenue,
+            'IDTHEME' => $idTheme,
+            'IDNIVEAU' => $idNiveau,
         );
         $tabTech = array(
+            'IDCONFERENCE' => $idConfe,
             'mdp' => $idTech,
         );
         $this->load->model('Model_InsertConf');
