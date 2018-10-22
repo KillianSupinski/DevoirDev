@@ -14,21 +14,21 @@
     <link href="<?php echo base_url(); ?>Bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
 </head>
 <body>
-    <form>
+    <form method="POST" action="<?php echo base_url(); ?>index.php/ctrl_home">
     <input type="text" value="Numero de la conference"> 
     <?php
-    foreach ($lesIDConf as $unIdConf) {
+    foreach ($lesIdConf as $unIdConf) {
         ?>
-        <input type="text" value="<?php echo $unIdConf->$idConf; ?>"> 
+        <input type="text" value="<?php echo $unIdConf->$idConfe; ?>"> 
     <?php
     }
     ?>  
-    <input type="text" value=""> 
+    <input type="text" value="Titre de la conference"> 
     
-    <input type="text"> <br>
+    <input type="text" name="txtTitre"> <br>
 
     <input type="text" value="Contenue de la conference"> 
-    <input type="text" > 
+    <input type="text" name="txtContenue"> 
     <input type="text" value="Choix du niveau"> 
     <select>
     <?php
@@ -42,7 +42,13 @@
 
     <input type="text" value="Choix du thème"> 
     <select>
-        <option>Android</option>
+    <?php
+    foreach ($lesNomsTheme as $unNomTheme) {
+        ?>
+        <option value="<?php echo $unNomTheme->IDTHEME; ?>"><?php echo $unNomTheme->LIBELLETHEME; ?></option>
+    <?php
+    }
+    ?> 
     </select><br>
 
 
@@ -51,7 +57,7 @@
    <?php
     foreach ($lesTechs as $uneTech) {
         ?>
-         <input type='checkbox'id="idTech"value="<?php echo $uneTech->IDTECHNO; ?>"><?php echo $uneTech->NOMTECHNO; ?>
+         <input type='checkbox'name="idTech"value="<?php echo $uneTech->IDTECHNO; ?>"><?php echo $uneTech->NOMTECHNO; ?>
         <?php
     }
     ?>

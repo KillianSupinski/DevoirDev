@@ -4,7 +4,7 @@ class Model_Conference extends CI_Model
 {
     public function getIdConf()
     {
-        $sql = $this->db->query('select MAX(conference.IDCONFERENCE) +1 as idConf from conference');
+        $sql = $this->db->query('select MAX(conference.IDCONFERENCE) +1 as idConf  from conference');
 
         return $sql->result();
     }
