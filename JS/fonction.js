@@ -19,5 +19,4 @@ function AfficherCreeUneConference()
             }            
         }        
     );
-    var i = 4;
 }
