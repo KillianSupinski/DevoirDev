@@ -20,3 +20,25 @@ function AfficherCreeUneConference()
         }        
     );
 }
+function AfficherLesVotes()
+{
+    $.ajax(
+        {
+            type:"get",
+            url:"index.php/ctrl_home/afficherLesVotes",
+            data:"",
+            success:function(data)
+            {
+            
+                
+                $("#divVotes").empty();
+               
+                $("#divVotes").append(data);
+            },
+            error:function()
+            {
+                alert("Ereur d'affichage de creation");
+            }            
+        }        
+    );
+}

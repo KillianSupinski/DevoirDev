@@ -40,4 +40,11 @@ class ctrl_home extends CI_Controller
         $this->load->model('Model_InsertConf');
         $this->Model_InsertConf->insertConference($tab, $tabTech);
     }
+
+    public function afficherLesVotes()
+    {
+        $this->load->model('Model_Vote');
+        $data['lesVotes'] = $this->Model_Vote->getAllVote();
+        $this->load->view('view_Vote', $data);
+    }
 }
