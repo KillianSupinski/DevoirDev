@@ -27,15 +27,15 @@ class ctrl_home extends CI_Controller
         $idNiveau = $this->input->post('idNiveau');
         $idConfe = $this->input->post('txtIdConf');
         $tab = array(
-            'IDCONFERENCE' => $idConfe,
             'TITRE' => $titre,
             'CONTENU' => $contenue,
             'IDTHEME' => $idTheme,
             'IDNIVEAU' => $idNiveau,
+            'IDCONFERENCE' => $idConfe,
         );
         $tabTech = array(
             'IDCONFERENCE' => $idConfe,
-            'mdp' => $idTech,
+            'IDTECHNO' => $idTech,
         );
         $this->load->model('Model_InsertConf');
         $this->Model_InsertConf->insertConference($tab, $tabTech);
